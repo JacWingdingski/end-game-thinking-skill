@@ -37,7 +37,7 @@ Copy the `SKILL.md` and `references/` directory into your Claude Code skills fol
 
 ```bash
 # Clone this repo
-git clone https://github.com/YOUR_USERNAME/end-game-thinking-skill.git
+git clone https://github.com/shosmer/end-game-thinking-skill.git
 
 # Copy into your Claude Code skills directory
 cp -r end-game-thinking-skill/SKILL.md ~/.claude/skills/end-game-thinking/
@@ -92,4 +92,4 @@ MIT License — see [LICENSE](LICENSE).
 
 ## Author
 
-Shannon Hosmer ([@shannonhosmer](https://github.com/YOUR_USERNAME))
+Shannon Hosmer ([@shosmer](https://github.com/shosmer))
