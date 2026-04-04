@@ -10,7 +10,7 @@ When triggered, the skill walks through six phases (landscape research, position
 
 ## What to Download
 
-You only need the contents of the **`end-game-thinking-skill/`** directory:
+Everything you need is in the **`end-game-thinking-skill/`** directory:
 
 ```
 end-game-thinking-skill/
@@ -20,8 +20,6 @@ end-game-thinking-skill/
   README.md             <-- Detailed documentation (optional, for reference)
   LICENSE               <-- MIT License
 ```
-
-The root-level `SKILL.md` and `references/` are working copies — use the ones inside `end-game-thinking-skill/`.
 
 ## Installation
 
