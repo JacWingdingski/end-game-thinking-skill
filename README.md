@@ -23,6 +23,12 @@ end-game-thinking-skill/
 
 ## Installation
 
+### Claude Code Cowork
+
+This skill works great inside [Claude Code Cowork](https://docs.anthropic.com/en/docs/claude-code/cowork) — the collaborative multi-agent environment where Claude can research, write, and produce documents in a single session. Cowork's extended context and tool access make it ideal for the deep research and document generation this skill does.
+
+Install the same way as Claude Code below — Cowork picks up skills from the same `.claude/commands/` directory.
+
 ### Claude Code (CLI / Desktop / Web)
 
 1. Clone or download this repo:
