@@ -174,6 +174,69 @@ Every end game thinking exercise produces a written document. The format scales 
 
 Use the docx skill to produce a professional Word document when the scope warrants it. For lighter personal check-ins, a well-structured markdown file is fine.
 
+## Archive & Pattern Surfacing
+
+Every run of this skill feeds a growing archive. Over time, the archive becomes the most valuable part — it reveals how your thinking is evolving, which positions are holding up, and where you keep finding the same blindspots.
+
+### After Every Run: Save and Log
+
+After producing the document, complete these two steps automatically:
+
+**Step 1: Save to local archive folder.**
+Save a markdown summary of the run to the user's end-game-thinking archive folder (default: `SH End Game Thinking/`). The filename format is: `YYYY-MM-DD - [Short Title].md`. The summary should include:
+
+- Date, mode, and scope
+- Positions identified (named, one per line)
+- Key themes (tagged from the standard list)
+- Top vulnerabilities or blindspots surfaced
+- Any pattern notes (connections to past runs)
+
+This markdown summary lives alongside the full document (docx or md) and is designed to be fast to scan programmatically on future runs.
+
+**Step 2: Log to Notion database.**
+Create an entry in the **End Game Thinking Archive** Notion database (`data_source_id: 2e1d3b9d-a314-43a1-aba8-5493885f626b`) with these properties:
+
+| Property | Value |
+|----------|-------|
+| Title | The document title |
+| Date | Run date |
+| Mode | Personal Check-In or Advisory |
+| Scope | Career, Team, Company, Industry, or Decision |
+| Positions Identified | Named positions, one per line |
+| Key Themes | Tag from: AI acceleration, Trust architecture, Role convergence, Regulatory shift, Power dynamics, Skill evolution, Domain expertise, Organizational change, Competitive landscape |
+| Vulnerabilities Found | Top vulnerabilities/blindspots |
+| Status | Active (default for new runs) |
+| File Name | Local filename of the full document |
+| Pattern Notes | Any cross-run patterns noticed |
+
+Add the full document content as the Notion page body so it's searchable.
+
+### Before Every Run: Read the Archive
+
+At the start of each new run, before doing any research, read the archive:
+
+1. **Scan local archive folder** for all past summary files. Read them to build a picture of:
+   - What positions have been identified before
+   - Which themes keep recurring
+   - What vulnerabilities were flagged but may not have been addressed
+   - How positions have evolved over time
+
+2. **Surface patterns.** Before beginning Phase 1, present a brief "Archive Review" to the user:
+   - **Recurring positions:** Positions that appear in 3+ runs — these are your core strategic bets
+   - **Evolving positions:** Positions that have shifted or been renamed — shows strategic learning
+   - **Persistent blindspots:** Vulnerabilities flagged multiple times but never resolved — these need attention
+   - **Theme drift:** How the dominant themes have shifted over time — shows where the landscape is moving
+   - **Gaps:** Scopes or angles that haven't been explored recently
+
+3. **Carry context forward.** Reference specific past runs by name when relevant during the current exercise. "In your February run, you identified X as a key vulnerability — let's see if that's still true." This makes each run build on the last rather than starting from scratch.
+
+### Updating Past Entries
+
+When a current run reveals that a position from a past run has evolved or been superseded:
+- Update the Status field on the old Notion entry (Active → Evolved or Superseded)
+- Add a Pattern Note on the old entry referencing the new run
+- Note the evolution in the current run's document
+
 ## Tone and Approach
 
 - **Direct over diplomatic.** Name things plainly. "This position is vulnerable" not "there may be some challenges."
@@ -184,11 +247,13 @@ Use the docx skill to produce a professional Word document when the scope warran
 
 ## Getting Started
 
-When the user triggers this skill, determine:
+When the user triggers this skill:
 
-1. **Mode:** Personal check-in or advisory? (Ask if unclear.)
-2. **Scope:** What's the domain? (Career, team, company, industry, specific decision?)
-3. **Depth:** Quick check-in or comprehensive analysis? (Context cues: "thinking about" = lighter, "I need to present" or "help me figure out" = deeper.)
-4. **Prior context:** Has the user done end game thinking before? Check for previous documents or memory. If this is a follow-up, reference prior positions and assess what's changed.
-
-Then move through the six phases, scaling depth to match the scope. Always produce a document at the end.
+1. **Read the archive.** Scan the local archive folder (`SH End Game Thinking/`) for past summary files. If this is the first run, note that and skip to step 2.
+2. **Determine mode:** Personal check-in or advisory? (Ask if unclear.)
+3. **Determine scope:** What's the domain? (Career, team, company, industry, specific decision?)
+4. **Determine depth:** Quick check-in or comprehensive analysis? (Context cues: "thinking about" = lighter, "I need to present" or "help me figure out" = deeper.)
+5. **Present archive review** (if past runs exist): Show the pattern summary before diving into new research. Let the user react and adjust focus.
+6. **Run the six phases**, scaling depth to match the scope.
+7. **Produce the document.**
+8. **Save to archive and log to Notion.** Always complete both archive steps before finishing.
